@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(149, 179, 16);
+        }
+        header {
+            display: flex;
+            align-items: center;
+            background-color: rgb(169, 190, 72);
+            padding: 10px;
+        }
+        header img {
+            width: 100px;
+            height: auto;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: burlywood;
+            padding: 20px;
+            height: 100vh;
+        }
+        .sidebar h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            color: white;
+        }
+        .video-container {
+            text-align: center;
+        }
+        .video {
+            border: 5px solid gold;
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            height: 450px;
+        }
+        .video-tabs {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .video-tabs button {
+            background-color: #f0e68c;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .video-tabs button:hover {
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://cdn.discordapp.com/attachments/414209411322740746/1291454284348522586/Picture3.png?ex=670616c7&is=6704c547&hm=781a00ec3d5d36c6e1ac55add592d4aac8441ad75dcbc1608b3f25b913d5cc87&" alt="Website Logo">
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>Home</h2>
+            <ul>
+                <li><a href="#category2">Lake</a></li>
+                <li><a href="#category3">Water</a></li>
+                <li><a href="#category4">Forest</a></li>
+                <li><a href="#category4">Building</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="video-container">
+                <iframe class="video" id="mainVideo" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+
+                <div class="video-tabs">
+                    <button onclick="changeVideo('https://www.youtube.com/embed/e5UOtzRybzU')">Lake</button>
+                    <button onclick="changeVideo('https://www.youtube.com/embed/4NnM9Bu-BU0')">Boat</button>
+                    <button onclick="changeVideo('https://www.youtube.com/embed/Gt97WoWfzmo')">Forest</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function changeVideo(videoUrl) {
+            document.getElementById('mainVideo').src = videoUrl;
+        }
+    </script>
+
+</body>
+</html>
